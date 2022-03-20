@@ -62,7 +62,7 @@ function getNetSpeed() {
       downloadSpeed = (downloadBytes - prevDownloadBytes) / (refreshTime * unitBase);
 
       // Show upload + download = total speed on shell
-      netSpeed.set_text("⇅ " + netSpeedFormat(uploadSpeed + downloadSpeed));
+      netSpeed.set_text("↓ " + netSpeedFormat( downloadSpeed) + " ↑ " + netSpeedFormat( uploadSpeed) );
       prevUploadBytes = uploadBytes;
       prevDownloadBytes = downloadBytes;
     }
